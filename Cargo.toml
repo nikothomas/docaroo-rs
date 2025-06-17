@@ -1,6 +1,6 @@
 [package]
 name = "docaroo-rs"
-version = "0.1.0"
+version = "0.0.1"
 edition = "2024"
 authors = ["Nikolas Yanek-Chrones <nik@sunnyhealth.ai>"]
 description = "A Rust SDK for the Docaroo Care Navigation Data API, providing healthcare provider pricing discovery and procedure likelihood analysis"
@@ -12,7 +12,7 @@ keywords = ["healthcare", "api", "docaroo", "pricing", "medical"]
 categories = ["api-bindings", "web-programming::http-client"]
 license = "MIT"
 exclude = ["/.github", "/target", "**/*.orig", "*.log"]
-rust-version = "1.74"
+rust-version = "1.85"
 
 [dependencies]
 bon = "3.6.4"
