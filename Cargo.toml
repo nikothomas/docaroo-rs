@@ -1,0 +1,37 @@
+[package]
+name = "docaroo-rs"
+version = "0.1.0"
+edition = "2024"
+authors = ["Nikolas Yanek-Chrones <nik@sunnyhealth.ai>"]
+description = "A Rust SDK for the Docaroo Care Navigation Data API, providing healthcare provider pricing discovery and procedure likelihood analysis"
+documentation = "https://docs.rs/docaroo-rs"
+repository = "https://github.com/nikothomas/docaroo-rs"
+homepage = "https://github.com/nikothomas/docaroo-rs"
+readme = "README.md"
+keywords = ["healthcare", "api", "docaroo", "pricing", "medical"]
+categories = ["api-bindings", "web-programming::http-client"]
+license = "MIT"
+exclude = ["/.github", "/target", "**/*.orig", "*.log"]
+rust-version = "1.74"
+
+[dependencies]
+bon = "3.6.4"
+reqwest = { version = "0.12.20", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0"
+tokio = { version = "1.43", features = ["rt", "rt-multi-thread", "macros"] }
+chrono = { version = "0.4", features = ["serde"] }
+url = "2.5"
+
+[dev-dependencies]
+tokio-test = "0.4"
+wiremock = "0.6"
+pretty_assertions = "1.4"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[badges]
+maintenance = { status = "actively-developed" }
